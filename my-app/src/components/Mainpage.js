@@ -16,10 +16,23 @@ import image24 from '../images/machine learning.png';
 import image25 from '../images/opencv.png';
 import image26 from '../images/embedded programming.png';
 
+import { useNavigate } from 'react-router-dom';
+
+
 export default function Mainpage() {
   const smallImageStyle = {
     height: '100px', 
   };
+  let navigate=useNavigate();
+  
+  const sppu=()=>{
+    console.log("imaeg clkck")
+    navigate({
+        pathname:"/colleges",
+        
+    }
+    )
+  }
   return (
     <>
     {/* //1st slider */}
@@ -28,7 +41,7 @@ export default function Mainpage() {
           <div className="carousel-inner ">
             <div className="carousel-item active ">
               <div className="d-flex ">
-                <img src={image1} className="d-block w-50 h-25 "  alt=" 1" />
+                <img src={image1} className="d-block w-50 h-25 " onClick={sppu} alt=" 1" />
                 <img src={image2} className="d-block w-50 h-25" alt=" 2" />
                 <img src={image3} className="d-block w-50 " alt=" 3" />
               </div>
@@ -67,7 +80,7 @@ export default function Mainpage() {
 
 
         {/* //2nd slider */}
-      <div className="container2 mt-4">
+      <div className="container2 mt-5">
         <div id="carouselExample2" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {auth} from './Firebase-config'
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
@@ -8,16 +9,24 @@ export default function Login() {
   const[email,setEmail]=useState('');
   const[password,setPassword]=useState('');
 
+  let navigate=useNavigate();
+
 const signIn=(e)=>{
 e.preventDefault();
 signInWithEmailAndPassword(auth,email,password).then((userCredential)=>{console.log(userCredential)})
 .catch((error)=>{
   console.log(error);
 })
+let b=({auth})
+if(b){
+    navigate({
+        pathname:"/mainpage",
+        
+    }
+    )
 }
+};
 
-
- 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 mb-5 " style={{ marginTop: '-50px' }}>
       <div className="text-center p-5 border rounded-3 mb-4 shadow">
@@ -52,7 +61,7 @@ signInWithEmailAndPassword(auth,email,password).then((userCredential)=>{console.
         <div className="mb-3 text-success"></div>
         <button className="btn btn-success btn-lg w-100 mt-2" type="submit" onClick={signIn}>Login</button> {/* Enlarged button */}
         <p className="mt-3">
-          Don't have an account? <a href="#"></a>Sign Up 
+         Don't have an account? <a href="/signup">Sign Up </a>
         </p>
       </div>
     </div>

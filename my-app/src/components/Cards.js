@@ -5,7 +5,7 @@ import adminpic from '../images/Admin.png';
 export default function Cards() {
   return (
     <div className="container mt-5 ">
-      <div className="row justify-content-center mt-5  mx-lg-2  mx-md-4 mx-sm-5  border shadow-lg">
+      <div className="row justify-content-center mt-5  mx-lg-2  mx-md-4 mx-sm-5  ">
         <div className="col-lg-4 col-md-6 col-sm-12 mb-4 text-center mt-2 mx-5">
           <div className="card" style={{ width: '20rem' }}>
             <img src={stud} className="card-img-top" alt="Student" />
@@ -22,7 +22,7 @@ export default function Cards() {
             <div className="card-body">
               <h5 className="card-title">Admin</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" className="btn btn-success w-100">Join in</a>
+              <a href="./login" className="btn btn-success w-100">Join in</a>
             </div>
           </div>
         </div>
