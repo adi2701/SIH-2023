@@ -14,6 +14,7 @@ import Colleges from './components/Colleges';
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from './components/Contact';
 import UserProfile from './components/UserProfile';
+import Mmcoe from './components/Mmcoe';
 
 
 // function App() {
@@ -54,6 +55,7 @@ function App() {
         <Route path="/colleges" element={<Colleges />}></Route>
         <Route path="/userprofile" element={<UserProfile />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/mmcoe" element={<Mmcoe />}></Route>
       </Routes>
     </div>
   );

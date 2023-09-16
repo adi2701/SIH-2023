@@ -11,7 +11,7 @@ export default function Cards() {
             <img src={stud} className="card-img-top" alt="Student" />
             <div className="card-body">
               <h5 className="card-title ">Student</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p className="card-text">A little progress each day adds to a big result.</p>
               <a href="./login" className="btn btn-success w-100">Join in</a>
             </div>
           </div>
@@ -21,7 +21,7 @@ export default function Cards() {
             <img src={adminpic} className="card-img-top" alt="Admin" />
             <div className="card-body">
               <h5 className="card-title">Admin</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p className="card-text">The finest mentors empower minds to uncover, not just memorize.</p>
               <a href="./login" className="btn btn-success w-100">Join in</a>
             </div>
           </div>

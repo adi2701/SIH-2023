@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.user-button:hover{
+  cursor: pointer;
+}
+.col-md-4:hover{
+  box-shadow: #282c34;
+}

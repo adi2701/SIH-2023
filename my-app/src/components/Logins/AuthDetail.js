@@ -31,19 +31,19 @@ export default function AuthDetails() {
   let navigate=useNavigate();
 
 
-    const handleprofile=()=>{
+    const handleprofile= (props = authUser.email)=>{
         navigate({
             pathname:"/userprofile",
-            
+            state: { email: authUser.email }
         }
         )
     }
 
   return (
-    <div className='d-flex justify-content-end'>
-      {authUser?<><p><p onClick={handleprofile}>{`${authUser.email} |`}</p> 
-      <button className="btn mb-1" onClick={userSignOut}>Logout</button></p>
-      </>:<p>Guest |<button className="btn mb-1"><a href='/login'>Login</a></button></p>}
+    <div className='d-flex justify-content-end mt-3'>
+      {authUser?<><p><button className='btn btn-primary mb-2 mx-2'><span className='user-button ' onClick={handleprofile}>{`${authUser.email} `}</span></button>
+      <button className="btn mb-2  btn-danger" onClick={userSignOut}>Logout</button></p>
+      </>:<p>Guest |<button className="btn mt-1 mb-2 mx-2"><a href='/'>Login</a></button></p>}
     </div>
   )
 }

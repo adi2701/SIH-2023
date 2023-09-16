@@ -39,6 +39,11 @@ export default function Contact() {
             </div>
 
             <div className="mb-3">
+            <label htmlFor="exampleFormControlInput1" className="form-label">Enter your Project Link</label>
+            <input type="" className="form-control" id="depo" placeholder=""/>
+            </div>
+
+            <div className="mb-3">
             <label htmlFor="exampleFormControlTextarea1" className="form-label">Your Abstract</label>
             <textarea className="form-control" id="exampleFormControlTextarea1" name='message'rows="3"></textarea>
             </div>

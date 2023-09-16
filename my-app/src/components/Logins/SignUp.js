@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import {auth} from './Firebase-config'
 import {  createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
   const[email,setEmail]=useState('');
   const[password,setPassword]=useState('');
+
+  let navigate=useNavigate();
+
 
 const signUp=(e)=>{
 e.preventDefault();
@@ -12,6 +17,14 @@ createUserWithEmailAndPassword(auth,email,password).then((userCredential)=>{cons
 .catch((error)=>{
   console.log(error);
 })
+let b=({auth})
+if(b){
+    navigate({
+        pathname:"/mainpage",
+        
+    }
+    )
+}
 }
 
   return (

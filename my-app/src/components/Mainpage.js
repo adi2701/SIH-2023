@@ -33,12 +33,13 @@ export default function Mainpage() {
     }
     )
   }
+  
   return (
     <>
     {/* //1st slider */}
       <div>
-        <div id="carouselExample1" className="carousel slide mt-4 h-100" data-bs-ride="carousel">
-          <div className="carousel-inner ">
+        <div id="carouselExample1" className="carousel slide mt-5 mx-5  h-100" data-bs-ride="carousel"><h2 className='text-center'>Universities</h2>
+          <div className="carousel-inner shadow-sm">
             <div className="carousel-item active ">
               <div className="d-flex ">
                 <img src={image1} className="d-block w-50 h-25 " onClick={sppu} alt=" 1" />
@@ -64,8 +65,8 @@ export default function Mainpage() {
             </div>
            
 
-           {/* buttons */}
           </div>
+           {/* buttons */}
           <button className="carousel-control-prev black-button" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
@@ -81,8 +82,8 @@ export default function Mainpage() {
 
         {/* //2nd slider */}
       <div className="container2 mt-5">
-        <div id="carouselExample2" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
+        <div id="carouselExample2" className="carousel slide" data-bs-ride="carousel"><h2 className='text-center'>Domains</h2>
+          <div className="carousel-inner mt-5">
             <div className="carousel-item active">
               <div className="d-flex h-50">
                 <img src={image21} className="d-block w-50 " alt=" 1" />
